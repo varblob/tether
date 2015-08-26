@@ -1169,7 +1169,7 @@ var TetherClass = (function () {
         var offsetParentIsBody = true;
         var currentNode = this.element.parentNode;
         while (currentNode && currentNode.tagName !== 'BODY') {
-          if (getComputedStyle(currentNode).position !== 'static') {
+          if (getComputedStyle(currentNode).position === 'static') {
             offsetParentIsBody = false;
             break;
           }
