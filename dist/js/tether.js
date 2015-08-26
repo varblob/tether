@@ -1177,7 +1177,7 @@ var TetherClass = (function () {
           currentNode = currentNode.parentNode;
         }
 
-        if (!offsetParentIsBody) {
+        if (offsetParentIsBody) {
           this.element.parentNode.removeChild(this.element);
           document.body.appendChild(this.element);
         }
